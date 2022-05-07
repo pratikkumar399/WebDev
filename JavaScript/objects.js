@@ -42,10 +42,15 @@ const key1 = "object2";
 const value1 = "values";
 const value2 = "values";
 
-const obj = {};
+const obj = {
 
-obj[key1] = value1;
-obj[key2] = value2;
+    [key1]: value1,
+    [key2]: value2
+
+};
+
+// obj[key1] = value1;
+// obj[key2] = value2;
 console.log(obj);
 
 // spread operator

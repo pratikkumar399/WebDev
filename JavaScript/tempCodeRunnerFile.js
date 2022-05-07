@@ -1,0 +1,1 @@
+print(numbers[0], 0);
