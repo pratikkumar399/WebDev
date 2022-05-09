@@ -108,7 +108,16 @@ confirm --> shows a message and waits for the user to press“ OK” or“ Cance
 */
 
 // without parentheses
-// let area = (height ?? 100) * (width ?? 50);
+// let area = (height ?? 100) * (width??50);
 
 // ...works this way (not what we want):
 // let area1 = height ?? (100 * width) ?? 50;
+
+// optional chaining
+const user = {
+    firstName: "Pratik",
+    address: { houserNumber: 123 },
+};
+
+console.log(user?.firstName);
+console.log(user?.address?.houserNumber);

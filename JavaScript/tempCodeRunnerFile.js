@@ -1,1 +1,1 @@
-print(numbers[0], 0);
+function
