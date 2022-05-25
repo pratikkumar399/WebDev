@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="demo.js" defer></script>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding : 0;
+        margin : 0;
+      }
+      main{
+          min-height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+      }
+      h1{
+          padding: 1rem 2rem;
+          background-color:#333;
+          color: #efefef;
+          border-radius: 1rem;
+      }
+      button{
+          padding: 1rem 2rem;
+          font-size:1.4rem;
+          border-radius: 1rem ;
+          cursor: pointer;
+          margin-top: 1rem;
+          border: none;
+          outline: none;
+          transition:background 0.4s ;
+      }
+      button:hover{
+          background : rgb(214,214,214) ;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1>Current Color :  <span class="currentColor">rgb(255,255,255)</span> </h1>
+        <button class="btn">Click Me to Change background color</button>
+      </div>
+    </main>
+  </body>
+</html>
