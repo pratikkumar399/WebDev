@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <title>Filterable List</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1 class="center-align">My Friends List</h1>
+        <input type="text" id="filterInput" placeholder="Search names...">
+        <ul id="names" class="collection1with-header">
+            <!-- Names with A -->
+            <li class="collection-header">
+                <h5>A</h5>
+            </li>
+            <li class="collection-item">
+                <a href="#">Ashwin</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">Ankit</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">Anmol</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">Anmol</a>
+            </li>
+            <!-- Names with M -->
+            <li class="collection-header">
+                <h5>M</h5>
+            </li>
+            <li class="collection-item">
+                <a href="#">Mayank</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">Mehul</a>
+            </li>
+            <!--Names with P -->
+            <li class="collection-header">
+                <h5>P</h5>
+            </li>
+            <li class="collection-item">
+                <a href="#">Pratik</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">Piyush</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">Patrick</a>
+            </li>
+            <!-- Names with R -->
+            <li class="collection-header">
+                <h5>R</h5>
+            </li>
+            <li class="collection-item">
+                <a href="#">Ravi</a>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <script>
+        // getting the input element
+        let filterInput = document.getElementById("filterInput") ;
+
+        // adding event listener
+        filterInput.addEventListener("keyup" ,()=>{
+            // get value of the input 
+            let filterValue = document.getElementById("filterInput").value.toUpperCase() ;
+            console.log(filterValue) ;
+
+            // get names ul 
+            let ul = document.getElementById("names") ;
+            // get li from ul 
+            let li =ul.querySelectorAll(".collection-item") ;
+
+            // looping thorugh collection items li
+            for(let i=0 ; i<li.length ; i++) {
+                let a = li[i].getElementsByTagName("a")[0] ;
+                // if matched 
+                if(a.innerHTML.toUpperCase().indexOf(filterValue) > -1){
+                    li[i].style.display = "" ;
+                }
+                else{
+                    li[i].style.display = "none" ;
+                }
+            }
+
+        })
+
+    </script>
+</body>
+
+</html>
