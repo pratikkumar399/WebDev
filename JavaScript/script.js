@@ -50,7 +50,7 @@ console.log(color); // #FF7F00
  
     3. Strings
     4. Boolean 
-        -- >  either true or false 
+        -->  either true or false 
         --> In JavaScript, null is not a “reference to a non-existing object” or a “null pointer” like in some other languages.
         --> It’s just a special value which represents “nothing”, “empty” or “value unknown”.
         --> The special value undefined also stands apart. It makes a type of its own, just like null.
