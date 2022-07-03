@@ -1,7 +1,7 @@
 import React from 'react'
 const Square = ({ value }) => {
     return (
-        <button type="button" className="square">{value}</button>
+        <button type="button" className="square" onClick={() => { }} >{value}</button>
     )
 }
 
