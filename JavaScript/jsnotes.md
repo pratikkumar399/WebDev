@@ -16,7 +16,7 @@
         > When control enters execution context , variable is initialised and [this] value is determined
         > this keyword poinds to window object in the browser
 
-*Please Note* :)
+*Please Note* :alien:
 ```txt
 JavaScript is a synchronous programming language and single threaded . 
 - Synchronous: It can perform only one command at a time.

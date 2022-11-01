@@ -1,0 +1,318 @@
+* {
+  box-sizing: border-box;
+  color: #333;
+}
+
+body {
+  background-color: #81a69b;
+  background-image: url("http://pets-images.dev-apis.com/pets/wallpaperB.jpg");
+  margin: 0;
+  font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.search-params {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.search-params form {
+  width: 360px;
+  float: left;
+  background: #faeff0;
+  border-radius: 6px;
+  margin: 0 25px 0 0;
+  padding: 35px 15px 15px;
+  box-shadow: 0 0 12px #aaa, 0 0 12px #fff;
+}
+
+.search {
+  width: 715px;
+  float: left;
+  background: #faeff0;
+  border-radius: 6px;
+  margin-bottom: 25px;
+  padding: 15px;
+  box-shadow: 0 0 12px #aaa, 0 0 12px #fff;
+}
+
+.details {
+  width: 1100px;
+  background: #faeff0;
+  border-radius: 6px;
+  margin: 0 auto 25px;
+  padding: 15px;
+  box-shadow: 0 0 12px #aaa, 0 0 12px #fff;
+}
+
+.pet {
+  width: 100%;
+  height: 130px;
+  border-bottom: 2px solid #333;
+  margin: 25px 0;
+  display: block;
+  overflow: hidden;
+}
+
+.pet img {
+  width: 100px;
+  min-height: 100px;
+}
+
+.info {
+  float: left;
+  width: 80%;
+  height: 100px;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+
+.image-container {
+  clip-path: circle(50%);
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin: 0 20px 0 10px;
+}
+
+.pet h1 {
+  white-space: nowrap;
+  color: #333;
+  width: 95%;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 30px;
+  font-weight: normal;
+  overflow: hidden;
+}
+
+header > a, #root > div > h1 {
+  filter: brightness(150%);
+  width: 279px;
+  height: 76px;
+  text-indent: -9999px;
+  background-image: url("http://static.frontendmasters.com/resources/2019-05-02-complete-intro-react-v5/image-logo.png");
+  margin: 20px 0;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.pet h2 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+header a {
+  color: #333;
+  padding-bottom: 10px;
+  font-size: 3px;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+}
+
+header {
+  width: 1100px;
+  place-content: center;
+  margin: 0 auto;
+  padding: 20px 0 0;
+  display: flex;
+}
+
+.details p {
+  padding: 0 15px;
+  line-height: 1.5;
+}
+
+.details h1 {
+  text-align: center;
+  color: #333;
+  margin: 5px 0;
+  font-size: 60px;
+}
+
+.details h2 {
+  text-align: center;
+  margin: 5px 0 20px;
+}
+
+.carousel {
+  height: 400px;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 8px;
+  display: flex;
+}
+
+.carousel > img {
+  max-width: 45%;
+  max-height: 400px;
+}
+
+.carousel-smaller {
+  width: 50%;
+}
+
+.carousel-smaller > img {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  border: 2px solid #333;
+  border-radius: 50%;
+  margin: 15px;
+  display: inline-block;
+}
+
+.carousel-smaller > img.active {
+  opacity: .6;
+  border-color: #333;
+}
+
+.search-params label {
+  width: 60px;
+  display: block;
+}
+
+.search-params input, .search-params select {
+  height: 30px;
+  width: 325px;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.search-params button, #modal button, #modal a, .details button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #ad343e;
+  border: 1px solid #333;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 5px 25px;
+  font-size: 18px;
+  display: block;
+}
+
+#modal a {
+  margin-right: 15px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.search-params button:hover {
+  background-color: #122622;
+}
+
+.search-params button:active {
+  background-color: #5f1d22;
+}
+
+.search-params button:focus {
+  border: 1px solid #6495ed;
+}
+
+#modal {
+  z-index: 10;
+  background-color: #000000e6;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  inset: 0;
+}
+
+#modal:empty {
+  display: none;
+}
+
+#modal > div {
+  max-width: 500px;
+  text-align: center;
+  background: #faeff0;
+  border-radius: 30px;
+  padding: 15px;
+}
+
+#modal .buttons button {
+  margin-right: 15px;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 1129px) {
+  header {
+    width: 95%;
+    place-content: center;
+    margin: 0 auto;
+    padding: 20px 0 0;
+    display: flex;
+  }
+
+  .search-params {
+    width: 95%;
+  }
+
+  .search-params form {
+    margin-bottom: 20px;
+  }
+
+  .search {
+    width: 55%;
+    float: left;
+    border-radius: 9px;
+    margin-bottom: 25px;
+    padding: 15px;
+  }
+
+  .details {
+    width: 95%;
+    border-radius: 9px;
+    margin: 0 auto 25px;
+    padding: 15px;
+  }
+
+  .info {
+    width: 65%;
+  }
+
+  .info h1, .info h2 {
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (max-width: 945px) {
+  .search-params {
+    width: 95%;
+  }
+
+  .search {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .pet {
+    height: 200px;
+  }
+
+  .info {
+    width: 100%;
+    text-align: center;
+  }
+
+  .image-container {
+    float: none;
+    margin: 0 auto;
+  }
+
+  .carousel-smaller > img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/*# sourceMappingURL=index.2cdaf7bc.css.map */
