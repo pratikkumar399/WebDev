@@ -14,22 +14,24 @@
  
  */
 
-function createUser(firstName, lastName, email, age, address) {
+class createUser {
+    constructor(firstName, lastName, email, age, address) {
 
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.email = email;
-    this.age = age;
-    this.address = address;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.age = age;
+        this.address = address;
+    }
+    about() {
+        return `${this.firstName} is ${this.age} years old.`;
+    }
+    is18() {
+        return this.age >= 18;
+    }
 }
 
-createUser.prototype.about = function () {
-    return `${this.firstName} is ${this.age} years old.`;
-};
 
-createUser.prototype.is18 = function () {
-    return this.age >= 18;
-};
 
 const user1 = new createUser('patrick', 'rai', 'harshit@gmail.com', 19, "my address");
 const user2 = new createUser('pratik', 'raii', 'harshit@gmail.com', 19, "my address");

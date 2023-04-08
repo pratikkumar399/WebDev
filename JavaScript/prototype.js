@@ -1,6 +1,6 @@
 // prototype in javascript
-function  hello(){
-    console.log("Hello World") ;
+function hello1() {
+    console.log("Hello World");
 }
-console.log(hello.prototype);
-console.log(hello.name);
+console.log(hello1.prototype);
+console.log(hello1.name);
