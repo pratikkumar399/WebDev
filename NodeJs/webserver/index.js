@@ -1,68 +1,30 @@
 const http = require('http');
 const fs = require('fs');
+const express = require('express');
 
-const index = fs.readFileSync('index.html', 'utf8');
-const data = JSON.parse(fs.readFileSync('data.json', 'utf8'));
-const product = data.products[0];
+const index = fs.readFileSync('index.html', 'utf-8');
+const data = JSON.parse(fs.readFileSync('data.json', 'utf-8'));
+const products = data.products;
 
-const age = {
-    data: 5
-}
+const server = express();
 
-const server = http.createServer((req, res) => {
-    console.log("Server Started");
-    switch (req.url) {
-        case '/':
-            res.setHeader('Content-Type', 'text/html');
-            res.end(index);
-            break;
-        case '/api':
-            res.setHeader('Content-Type', 'application/json');
-            res.end(JSON.stringify(data));
-            break;
-        case '/product':
-            res.setHeader('Content-Type', 'text/html');
-            let modifiedIndex = index.replace('**title**', product.title)
-                .replace('**url**', product.thumbnail)
-                .replace('**price**', product.price)
-                .replace('**rating**', product.rating)
-            res.end(modifiedIndex);
-        default:
-            res.writeHead(404);
-            res.end();
 
-    }
+// api- endpoint - route 
+// get is the type of request 
+server.get('/', (req, res) => {
+    res.send("Get");
+})
+server.post('/', (req, res) => {
+    res.send("Post");
+})
+server.put('/', (req, res) => {
+    res.send("Put");
+})
+server.delete('/', (req, res) => {
+    res.send("Delete");
+})
+server.patch('/', (req, res) => {
+    res.send("Patch");
 })
 
 server.listen(8080);
-
-
-
-
-
-
-
-
-
-
-// const express = require("express");
-// const bodyParser = require("body-parser");
-
-// const app = express();
-
-// app.use(bodyParser.json());
-
-// const sayHi = (req, res) => {
-//   res.send("Hi!");
-// };
-
-// app.get("/", sayHi);
-
-// app.post("/add", (req, res) => {
-//   const { a, b } = req.body;
-//   res.send(`The sum is: ${a + b}`);
-// });
-
-// app.listen(5000, () => {
-//   console.log(`Server is running on port 5000.`);
-// });
