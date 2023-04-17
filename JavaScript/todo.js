@@ -48,12 +48,12 @@ todoForm.addEventListener("submit", (e) => {
 });
 
 todoList.addEventListener("click", (e) => {
-   if(e.target.classList.contains("done")){
-       const liSpan =  e.target.parentNode.previousElementSibling ;
-       liSpan.style.textDecoration = "line-through";
-   }
-   if(e.target.classList.contains("remove")){
-       const liSpan =  e.target.parentNode.parentNode ;
-       liSpan.remove();
-   }
+    if (e.target.classList.contains("done")) {
+        const liSpan = e.target.parentNode.previousElementSibling;
+        liSpan.style.textDecoration = "line-through";
+    }
+    if (e.target.classList.contains("remove")) {
+        const liSpan = e.target.parentNode.parentNode;
+        liSpan.remove();
+    }
 })

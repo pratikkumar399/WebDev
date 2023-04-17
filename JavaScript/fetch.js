@@ -1,8 +1,8 @@
 // fetch 
 
-const URL = "https://jsonplaceholder.typicode.com/postssss";
+const URL = "https://jsonplaceholder.typicode.com/posts";
 
-fetch(URL,{
+fetch(URL, {
     method: 'POST',
     body: JSON.stringify({
         title: 'foo',
@@ -12,18 +12,18 @@ fetch(URL,{
     headers: {
         'Content-type': 'application/json; charset=UTF-8',
     },
-    })
-    .then(response =>{
-        if(response.ok){
+})
+    .then(response => {
+        if (response.ok) {
             return response.json()
-        }else{
+        } else {
             throw new Error("Something went wrong!!!")
         }
     })
-    .then(data =>{
+    .then(data => {
         console.log(data);
     })
-    .catch(error =>{
+    .catch(error => {
         console.log("inside catch");
         console.log(error);
     })
