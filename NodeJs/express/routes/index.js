@@ -1,6 +1,8 @@
 const router = require('express').Router();
+const apiKeyMiddleware = require('../middlewares/apiKey');
 
 
+// router.use(apiKeyMiddleware);
 router.get('/', (req, res) => {
     res.render('index', {
         'title': 'Server Side Rendering',
@@ -18,7 +20,7 @@ router.get('/download', (req, res) => {
 })
 
 
-router.get('/api/products', (req, res) => {
+router.get('/api/products', apiKeyMiddleware, (req, res) => {
     res.json([
         {
             id: '123',
