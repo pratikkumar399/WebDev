@@ -11,7 +11,7 @@ function App() {
       <Card>
         <Profile
           size={{
-            height: 100,
+            height: 200,
             width: 200
           }}
           person={{
@@ -23,7 +23,7 @@ function App() {
         <br />
         <Profile
           size={{
-            height: 100,
+            height: 200,
             width: 200
           }}
           person={{
