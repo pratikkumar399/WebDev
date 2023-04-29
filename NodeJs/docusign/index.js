@@ -137,7 +137,7 @@ app.get("/success", (request, resposne) => {
 
 // Start the server
 app.listen(8000, () => {
-    console.log("server has started", process.env.USER_ID);
+    console.log("server has started at port 8000 and the user is", process.env.USER_ID);
 });
 
 

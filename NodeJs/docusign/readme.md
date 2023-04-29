@@ -43,3 +43,25 @@ With the access token, you can make API requests to DocuSign on behalf of the us
 * You will be redirected to the DocuSign signing ceremony.
 * Sign the document as instructed.
 * Once you have successfully signed the document, you will be redirected to the /success page.
+
+
+## Screenshots to show the working of the application
+
+> Getting the access token
+![1](images/1.png)
+
+> verifying that the access token is valid
+![2](images/2.png)
+
+> getting user info from the access token
+![3](images/3.png)
+
+> Sending the template envolpe to the user mail id fir signature
+![4](images/4.png)
+
+> the document for signature
+![5](images/5.png)
+>After signing the document a success page is visible 
+![6](images/6.png)
+> the api dashboard for the app we are using for development
+![7](images/7.png)
