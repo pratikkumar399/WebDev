@@ -65,3 +65,7 @@ With the access token, you can make API requests to DocuSign on behalf of the us
 ![6](images/6.png)
 > the api dashboard for the app we are using for development
 ![7](images/7.png)
+>mail showing that the document has been signed
+![8](images/8.png)
+> the signed document
+![9](images/9.png)
