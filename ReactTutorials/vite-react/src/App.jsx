@@ -19,7 +19,7 @@ const App = () => {
     <div className="text-center">
       <div className="text-center w-84">
         <input onChange={handleInput} className="w-1/3 border-4 border-sky-800" type="text" />
-        <button onClick={addTasks} className={styles.style3}>Add Tasks</button>
+        <button onClick={addTasks} className={styles.style3}>Add Task</button>
       </div>
       <div>
         {todoList.map((tasks) => {
