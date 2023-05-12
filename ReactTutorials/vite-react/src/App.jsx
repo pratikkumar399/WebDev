@@ -11,10 +11,20 @@ const App = () => {
   }
 
   const addTasks = () => {
-    const newTasks = [...todoList, inputValue];
-    setTodoList(newTasks);
+    const task = {
+      id: todoList.length === 0 ? 1 : todoList[todoList.length - 1].id + 1,
+      taskName: inputValue,
+    }
+    setTodoList([...todoList, task]);
   }
 
+  const deleteTasks = (taskName) => {
+    const newTodoList = todoList.filter((task) => {
+      if (task === taskName) return false;
+      else return true;
+    });
+    setTodoList(newTodoList);
+  }
   return (
     <div className="text-center">
       <div className="text-center w-84">
@@ -24,8 +34,8 @@ const App = () => {
       <div>
         {todoList.map((tasks) => {
           return <div>
-            <h1 className={styles.style1}>{tasks}</h1>
-            <button className={styles.style4}>X</button>
+            <h1 className={styles.style1}>{tasks.taskName}</h1>
+            <button className={styles.style4} onClick={() => deleteTasks(tasks)}>X</button>
           </div>
         })}
       </div>
