@@ -1,11 +1,7 @@
-import Navbar from "./Navbar";
-import Cards from "./Cards";
-import Footer from "./Footer";
+import CTA from "./CTA";
 import Hero from "./Hero";
 
 export {
-    Navbar,
-    Cards,
-    Footer,
-    Hero,
+  CTA,
+  Hero,
 };

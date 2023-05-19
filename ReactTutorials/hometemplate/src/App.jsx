@@ -1,16 +1,21 @@
-import styles from './styles'
-import { Navbar, Hero, Footer } from './components'
-const App = () => {
+import styles from "./style"
+import Home from "./pages/Home"
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Hackathons from "./pages/Hackathons";
+import Event from "./pages/Event"
+import Resources from "./pages/Resources";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+
+const Layout = () => {
   return (
-    <div className="bg-black w-full overflow-hidden">
+    <div className="bg-primary w-full overflow-hidden">
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-        <Navbar />
-      </div>
-      <div className={`bg-primary ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
-          <Hero />
+          <Navbar />
         </div>
       </div>
+      <Outlet />
 
       <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
@@ -18,8 +23,43 @@ const App = () => {
         </div>
       </div>
     </div>
+  );
+};
 
-  )
-}
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/home",
+        element: <Home />,
+      },
+      {
+        path: "/events",
+        element: <Event />,
+      },
+      {
+        path: "/hackathons",
+        element: <Hackathons />,
+      },
+      {
+        path: "/resources",
+        element: <Resources />,
+      }
+    ],
+  },
+]);
+
+
+const App = () => (
+  <div>
+    <RouterProvider router={router} />
+  </div>
+);
 
 export default App;
