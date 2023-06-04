@@ -20,7 +20,7 @@ const Task = (props) => {
             </h1>
             {props.completed ? (
                 <button className={styles.style4} onClick={handleUncompleteTask}>
-                    Uncomplete
+                    Mark Uncomplete
                 </button>
             ) : (
                 <button className={styles.style4} onClick={handleCompleteTask}>
