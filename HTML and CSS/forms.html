@@ -5,68 +5,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registration Form</title>
     <style>
         body {
-            background-color: black;
+            background-color: pink;
             margin: 0 auto;
             padding: 10rem;
         }
-        
+
         form {
-            width: 40rem;
+            width: 30%;
             background-color: white;
-            /* box-sizing: border-box; */
+            border: 4px solid blue;
             border-radius: 8px;
             margin: 10px auto;
             padding: 10px;
         }
-        
+
         label {
-            font-size: 2rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
             display: block;
         }
-        
+
         input {
             display: block;
-            margin-bottom: 1rem;
-            box-sizing: border-box;
-            border: 1px solid rgba(10, 10, 110, 0.4);
-            font: inherit;
             width: 100%;
-            padding: 0.25rem;
         }
-        
-        input:focus {
-            background-color: purple;
-            color: white;
+
+        button {
+            font-size: 22px;
         }
-        
-        form button {
-            display: block;
-            font: inherit;
-            background-color: rgb(32, 5, 63);
-            color: white;
-            border: 1px solid rgb(32, 5, 63);
-            border-radius: 5px;
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-        }
-        
+
         button:hover {
-            background-color: rgb(52, 14, 95);
-            border: 1px solid rgb(52, 14, 95);
+            color: blue;
+            font-size: 25px;
+            cursor: pointer;
         }
     </style>
 </head>
 
 <body>
-    <form action="/" method="GET">
-        <label for="username">Enter your name </label>
-        <input type="text" name="user-name" id="username">
-        <button>Submit</button>
+    <h1 style="text-align: center;">Registration Form</h1>
+    <form action="https://roadmap.sh/nodejs" method="GET">
+        <label for="uid">Enter your Uid</label>
+        <input type="text" name="uid" id="uid">
+
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" id="firstName">
+
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" id="lastName">
+
+        <label for="gender">Gender</label>
+        <select name="gender" id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+
+        <label for="className">Class</label>
+        <input type="text" name="className" id="className">
+
+        <label for="subject">Subject</label>
+        <input type="text" name="subject" id="subject">
+
+        <h2>Select your skills</h2>
+        <input type="checkbox" id="html" name="skills" value="HTML">
+        <label for="html">HTML</label><br>
+
+        <input type="checkbox" id="css" name="skills" value="CSS">
+        <label for="css">CSS</label><br>
+
+        <input type="checkbox" id="javascript" name="skills" value="JavaScript">
+        <label for="javascript">JavaScript</label>
+
+        <p>Not a registered user</p>
+        <button type="submit">Register</button>
     </form>
 </body>
 
