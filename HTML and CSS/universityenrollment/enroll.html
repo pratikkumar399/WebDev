@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HTMl</title>
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        nav {
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
+</head>
+
+<body style="background-color: #f4f4f4;">
+    <!-- <header>
+        <h1>Your Path to success</h1>
+    </header> -->
+    <div id="span">
+        <center>
+            <strong>
+                <!-- <p style="font-size: 30px;">Want to enroll in the best University of India</p> -->
+                <!-- <p style="font-size: 30px;">Chandigarh University</p> -->
+            </strong>
+        </center>
+    </div>
+    <section class="container">
+        <form id="my-form">
+            <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Want to enroll ?
+            </h1>
+            <div class="msg"></div>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name">
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="text" id="email">
+                <select name="" id="option">
+                    <option value="Subjects">CSE</option>
+                    <option value="Subjects">ECE</option>
+                    <option value="Subjects">Mech</option>
+                </select>
+            </div>
+            <input class="btn" type="submit" value="Register">
+        </form>
+
+        <input type="button" value="Back" onclick="goBack()">
+        <ul id="users"></ul>
+
+        <!-- <ul class="items">
+            <li class="item">Item 1</li>
+            <li class="item">Item 2</li>
+            <li class="item">Item 3</li>
+        </ul> -->
+    </section>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>

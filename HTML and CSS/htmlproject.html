@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            height: 80px;
+            background-color: pink;
+        }
+
+        nav>h1 {
+            height: 50%;
+            text-align: center;
+
+        }
+
+        #hello {
+            /* margin-top: 10px; */
+            padding: 40px;
+        }
+
+        .grid {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(800px, 4fr));
+            grid-gap: 2rem;
+        }
+
+        .grid>div {
+            background: #EDE7F6;
+            padding: 1.5rem;
+            border-radius: 1rem;
+        }
+
+        /* body {
+            margin: 2rem;
+            font: 12px system-ui;
+        } */
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h1 id="hello">HTML Project</h1>
+    </nav>
+
+
+    <div class="grid">
+        <div class="item item-1">About Us
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit deserunt, amet, id nam natus incidunt
+                magni architecto deleniti assumenda veniam beatae officiis vitae eveniet iusto quos quaerat voluptate?
+                Atque, commodi! </p>
+        </div>
+        <div class="item item-2">Contact Us <br>
+            <form action="">
+                <label for="">Name</label>
+                <input type="text"><br>
+                <br>
+                <label for="">Email</label>
+                <input type="text">
+                <br>
+                <br>
+                <button>Submit</button>
+            </form>
+        </div>
+        <div class="item item-3"> Products
+
+            <table style="border: 2px solid red;">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Product 1</td>
+                        <td>Product 2rs</td>
+                    </tr>
+                    <tr>
+                        <td>Product 1</td>
+                        <td>Product 2rs</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="item item-3"> Services
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
