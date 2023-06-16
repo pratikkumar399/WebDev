@@ -1,0 +1,231 @@
+[ {
+        "id": 1,
+        "username": "john_doe",
+        "email": "john.doe@example.com",
+        "address": {
+            "street": "123 Main Street",
+            "city": "New York",
+            "state": "NY",
+            "postal_code": "10001",
+            "country": "United States"
+        },
+        "workplace": {
+            "company": "ABC Corporation",
+            "position": "Software Engineer",
+            "address": {
+                "street": "456 Elm Street",
+                "city": "San Francisco",
+                "state": "CA",
+                "postal_code": "94101",
+                "country": "United States"
+            }
+        }
+    },
+    {
+        "id": 2,
+        "username": "jane_smith",
+        "email": "jane.smith@example.com",
+        "address": {
+            "street": "789 Oak Avenue",
+            "city": "Chicago",
+            "state": "IL",
+            "postal_code": "60601",
+            "country": "United States"
+        },
+        "workplace": {
+            "company": "XYZ Corporation",
+            "position": "Marketing Manager",
+            "address": {
+                "street": "987 Maple Drive",
+                "city": "Los Angeles",
+                "state": "CA",
+                "postal_code": "90001",
+                "country": "United States"
+            }
+        }
+    },
+    {
+        "id": 3,
+        "username": "robert_johnson",
+        "email": "robert.johnson@example.com",
+        "address": {
+            "street": "456 Pine Street",
+            "city": "Boston",
+            "state": "MA",
+            "postal_code": "02101",
+            "country": "United States"
+        },
+        "workplace": {
+            "company": "123 Industries",
+            "position": "Sales Representative",
+            "address": {
+                "street": "654 Cedar Lane",
+                "city": "Seattle",
+                "state": "WA",
+                "postal_code": "98101",
+                "country": "United States"
+            }
+        }
+    },
+    {
+        "id": 4,
+        "username": "emily_wilson",
+        "email": "emily.wilson@example.com",
+        "address": {
+            "street": "789 Elm Street",
+            "city": "San Francisco",
+            "state": "CA",
+            "postal_code": "94101",
+            "country": "United States"
+        },
+        "workplace": {
+            "company": "DEF Corporation",
+            "position": "Project Manager",
+            "address": {
+                "street": "123 Oak Avenue",
+                "city": "New York",
+                "state": "NY",
+                "postal_code": "10001",
+                "country": "United States"
+            }
+        }
+    },
+    {
+        "id": 5,
+        "username": "michael_brown",
+        "email": "michael.brown@example.com",
+        "address": {
+            "street": "456 Cherry Lane",
+            "city": "Los Angeles",
+            "state": "CA",
+            "postal_code": "90001",
+            "country": "United States"
+        },
+        "workplace": {
+            "company": "GHI Corporation",
+            "position": "Product Manager",
+            "address": {
+                "street": "789 Pine Street",
+                "city": "Boston",
+                "state": "MA",
+                "postal_code": "02101",
+                "country": "United States"
+            }
+        }
+    },
+    {
+        "id": 6,
+        "username": "sarah_jackson",
+        "email": "sarah.jackson@example.com",
+        "address": {
+            "street": "789 Maple Drive",
+            "city": "Seattle",
+            "state": "WA",
+            "postal_code": "98101",
+            "country": "United States"
+        },
+        "workplace": {
+            "company": "456 Solutions",
+            "position": "Software Developer",
+            "address": {
+                "street": "123 Cherry Lane",
+                "city": "Chicago",
+                "state": "IL",
+                "postal_code": "60601",
+                "country": "United States"
+            }
+        }
+    },
+    {
+        "id": 7,
+        "username": "david_thompson",
+        "email": "david.thompson@example.com",
+        "address": {
+            "street": "456 Oak Avenue",
+            "city": "New York",
+            "state": "NY",
+            "postal_code": "10001",
+            "country": "United States"
+        },
+        "workplace": {
+            "company": "789 Enterprises",
+            "position": "Data Analyst",
+            "address": {
+                "street": "987 Pine Street",
+                "city": "San Francisco",
+                "state": "CA",
+                "postal_code": "94101",
+                "country": "United States"
+            }
+        }
+    },
+    {
+        "id": 8,
+        "username": "lisa_miller",
+        "email": "lisa.miller@example.com",
+        "address": {
+            "street": "789 Cedar Lane",
+            "city": "Chicago",
+            "state": "IL",
+            "postal_code": "60601",
+            "country": "United States"
+        },
+        "workplace": {
+            "company": "234 Corporation",
+            "position": "Marketing Coordinator",
+            "address": {
+                "street": "456 Cherry Lane",
+                "city": "Los Angeles",
+                "state": "CA",
+                "postal_code": "90001",
+                "country": "United States"
+            }
+        }
+    },
+    {
+        "id": 9,
+        "username": "steven_adams",
+        "email": "steven.adams@example.com",
+        "address": {
+            "street": "456 Elm Street",
+            "city": "Boston",
+            "state": "MA",
+            "postal_code": "02101",
+            "country": "United States"
+        },
+        "workplace": {
+            "company": "567 Solutions",
+            "position": "Business Analyst",
+            "address": {
+                "street": "789 Cedar Lane",
+                "city": "Seattle",
+                "state": "WA",
+                "postal_code": "98101",
+                "country": "United States"
+            }
+        }
+    },
+    {
+        "id": 10,
+        "username": "jennifer_wilson",
+        "email": "jennifer.wilson@example.com",
+        "address": {
+            "street": "789 Pine Street",
+            "city": "San Francisco",
+            "state": "CA",
+            "postal_code": "94101",
+            "country": "United States"
+        },
+        "workplace": {
+            "company": "345 Enterprises",
+            "position": "Human Resources Manager",
+            "address": {
+                "street": "123 Elm Street",
+                "city": "New York",
+                "state": "NY",
+                "postal_code": "10001",
+                "country": "United States"
+            }
+        }
+    }
+]
