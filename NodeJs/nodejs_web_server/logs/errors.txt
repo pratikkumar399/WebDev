@@ -1,0 +1,22 @@
+20230617	00:06:35	80b0ab2d-0bf0-48ff-a78b-f384bb4cc732	Not allowed by CORS	Error: Not allowed by CORS
+    at origin (C:\Peace\WebDev\NodeJs\nodejs_web_server\server2.js:31:22)
+    at C:\Peace\WebDev\NodeJs\nodejs_web_server\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (C:\Peace\WebDev\NodeJs\nodejs_web_server\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (C:\Peace\WebDev\NodeJs\nodejs_web_server\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (C:\Peace\WebDev\NodeJs\nodejs_web_server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Peace\WebDev\NodeJs\nodejs_web_server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Peace\WebDev\NodeJs\nodejs_web_server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Peace\WebDev\NodeJs\nodejs_web_server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Peace\WebDev\NodeJs\nodejs_web_server\node_modules\express\lib\router\index.js:280:10)
+    at C:\Peace\WebDev\NodeJs\nodejs_web_server\server2.js:22:5
+20230617	01:23:53	e1bbf6b7-ecb0-44d5-b220-33cc3fc76945	Cannot read properties of undefined (reading 'firstname')	TypeError: Cannot read properties of undefined (reading 'firstname')
+    at C:\Peace\WebDev\NodeJs\nodejs_web_server\routes\api\employees.js:30:56
+    at Layer.handle [as handle_request] (C:\Peace\WebDev\NodeJs\nodejs_web_server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Peace\WebDev\NodeJs\nodejs_web_server\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Peace\WebDev\NodeJs\nodejs_web_server\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Peace\WebDev\NodeJs\nodejs_web_server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Peace\WebDev\NodeJs\nodejs_web_server\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Peace\WebDev\NodeJs\nodejs_web_server\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\Peace\WebDev\NodeJs\nodejs_web_server\node_modules\express\lib\router\index.js:376:14)
+    at Function.process_params (C:\Peace\WebDev\NodeJs\nodejs_web_server\node_modules\express\lib\router\index.js:421:3)
+    at next (C:\Peace\WebDev\NodeJs\nodejs_web_server\node_modules\express\lib\router\index.js:280:10)
