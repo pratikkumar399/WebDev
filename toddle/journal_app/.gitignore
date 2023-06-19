@@ -1,6 +1,0 @@
-node_modules
-src
-index.js
-knexfile.js
-package.json
-package-lock.json

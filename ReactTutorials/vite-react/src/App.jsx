@@ -1,45 +1,43 @@
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Outlet } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Practice from "./pages/Practice";
 import styles from "./styles";
+const Layout = () => {
+  return (
+    <div>
 
-import { useState } from "react";
+      <Navbar />
+
+
+
+      <div className="flex-grow">
+        <Outlet />
+      </div>
+
+      <div className={`bg-primary  ${styles.paddingX} ${styles.flexCenter}`}>
+        <div className={`${styles.boxWidth}`}>
+          <Footer />
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const App = () => {
-  const [todoList, setTodoList] = useState([]);
-  const [inputValue, setInputValue] = useState("");
-
-  const handleInput = (event) => {
-    setInputValue(event.target.value);
-  }
-
-  const addTasks = () => {
-    const task = {
-      id: todoList.length === 0 ? 1 : todoList[todoList.length - 1].id + 1,
-      taskName: inputValue,
-    }
-    setTodoList([...todoList, task]);
-  }
-
-  const deleteTasks = (taskName) => {
-    setTodoList(todoList.filter((task) => task.id === taskName));
-  }
   return (
-    <div className="text-center">
-      <div className="text-center w-84">
-        <input onChange={handleInput} className="w-1/3 border-4 border-sky-800" type="text" />
-        <button onClick={addTasks} className={styles.style3}>Add Task</button>
-      </div>
-      <div>
-        {todoList.map((tasks) => {
-          return <div>
-            <h1 className={styles.style1}>{tasks.taskName}</h1>
-            <button className={styles.style4} onClick={() => deleteTasks(tasks)}>X</button>
-          </div>
-        })}
-      </div>
-    </div >
-  )
-}
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/practice" element={<Practice />} />
+        </Route>
+      </Routes>
+    </Router>
+  );
+};
 
-
-export default App
-
-
+export default App;
