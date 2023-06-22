@@ -4,8 +4,8 @@ import PracticeOption from '../components/Prarticeoption';
 const PracticePage = () => {
     const practiceOptions = [
         {
-            title: 'Option 1',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eleifend purus sit amet odio condimentum maximus. Morbi id urna sed metus varius pretium vel et velit. Sed ullamcorper eu dui ac fringilla. ',
+            title: 'Pratice Forms',
+            description: 'See how the forms work.',
             imageUrl: 'https://example.com/option1.jpg',
             link: '/option1',
         },
