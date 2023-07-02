@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Practice from "./pages/Practice";
 import styles from "./styles";
+import FormPage from "./pages/FormPage";
 const Layout = () => {
   return (
     <div>
@@ -34,6 +35,7 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/practice" element={<Practice />} />
+          <Route path="/practice/forms" element={<FormPage />} />
         </Route>
       </Routes>
     </Router>

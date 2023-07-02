@@ -38,7 +38,7 @@ const Footer = () => (
         <div className="w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-[1px] border-t-[#3F3E45]">
             <p className="font-poppins font-normal text-center text-[18px] leading-[27px] text-white">
                 <div className="container mx-auto text-center text-white">
-                    &copy; {new Date().getFullYear()} Automation Website. All rights reserved.
+                    &copy; {new Date().getFullYear()} CodeNexus. All rights reserved.
                 </div>
             </p>
 

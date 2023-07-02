@@ -1,13 +1,15 @@
 import React from 'react';
 import PracticeOption from '../components/Prarticeoption';
+import formsImage from '../assets/pimages/forms.png';
 
 const PracticePage = () => {
     const practiceOptions = [
         {
+            // src\assets\pimages\forms.png
             title: 'Pratice Forms',
             description: 'See how the forms work.',
-            imageUrl: 'https://example.com/option1.jpg',
-            link: '/option1',
+            imageUrl: formsImage,
+            link: '/practice/forms',
         },
         {
             title: 'Option 2',
