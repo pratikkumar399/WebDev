@@ -1,24 +1,50 @@
 import './App.css';
+import PlayButton from './components/PlayButton';
 import Video from './components/Video';
-
+import videoDb from './data/data';
+import { useState } from 'react';
 function App() {
-  let obj = {
-    title: 'React JS tutorial',
-    views: '999K',
-    time: '1 year ago',
-    channel: 'Coder Dost',
-  };
+
+  const [videos, setVideos] = useState(videoDb);
+
   return (
     <div className="App">
       <div>Videos</div>
-      <Video {...obj}></Video>
-      <Video title="Node JS tutorial" views="100K" time="1 month ago"></Video>
-      <Video
-        title="Mongo DB tutorial"
-        views="1M"
-        time="1 month ago"
-        channel="Coder Dost"
-      ></Video>
+      {/* let render the video object */}
+      <div>
+        <button onClick={
+          () => {
+            setVideos([...videos, {
+              id: videos.length + 1,
+              title: 'New Video',
+              views: 0,
+              time: '0:00',
+              channel: 'New Channel',
+              verified: false
+            }])
+          }
+
+        }>
+          Add Video
+        </button>
+      </div>
+      {
+        videos.map((video, index) => {
+          return (
+            <Video
+              key={index}
+              title={video.title}
+              views={video.views}
+              time={video.time}
+              channel={video.channel}
+              verified={video.verified}
+            >
+              <PlayButton onPlay={() => console.log('play')} onPause={() => console.log('pause')} >{video.title}</PlayButton>
+            </Video>
+          )
+        }
+        )
+      }
     </div>
   );
 }
