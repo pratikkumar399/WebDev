@@ -1,50 +1,24 @@
-import './App.css';
-import PlayButton from './components/PlayButton';
-import Video from './components/Video';
-import videoDb from './data/data';
 import { useState } from 'react';
+import './App.css';
+import AddVideo from './components/AddVideo';
+import videoDB from './data/data';
+import VideoList from './components/VideoList';
 function App() {
+  console.log('render App')
 
-  const [videos, setVideos] = useState(videoDb);
+  const [videos, setVideos] = useState(videoDB);
+
+  function addVideos(video) {
+    setVideos([
+      ...videos,
+      { ...video, id: videos.length + 1 }
+    ]);
+  }
 
   return (
-    <div className="App">
-      <div>Videos</div>
-      {/* let render the video object */}
-      <div>
-        <button onClick={
-          () => {
-            setVideos([...videos, {
-              id: videos.length + 1,
-              title: 'New Video',
-              views: 0,
-              time: '0:00',
-              channel: 'New Channel',
-              verified: false
-            }])
-          }
-
-        }>
-          Add Video
-        </button>
-      </div>
-      {
-        videos.map((video, index) => {
-          return (
-            <Video
-              key={index}
-              title={video.title}
-              views={video.views}
-              time={video.time}
-              channel={video.channel}
-              verified={video.verified}
-            >
-              <PlayButton onPlay={() => console.log('play')} onPause={() => console.log('pause')} >{video.title}</PlayButton>
-            </Video>
-          )
-        }
-        )
-      }
+    <div className="App" onClick={() => console.log('App')}>
+      <AddVideo addVideos={addVideos}></AddVideo>
+      <VideoList videos={videos}></VideoList>
     </div>
   );
 }
