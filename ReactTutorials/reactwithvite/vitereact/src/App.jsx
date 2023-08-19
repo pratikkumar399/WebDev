@@ -1,26 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import React, { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import './App.css';
 
 function App() {
+  const [isTextVisible, setTextVisible] = useState(true);
 
-
-  const [greeting, setGreeting] = useState(
-    'Hello Function Component!'
-  );
+  const toggleTextVisibility = () => {
+    setTextVisible(prevIsTextVisible => !prevIsTextVisible);
+  };
 
   return (
-    <div>
-      <h1>{greeting}</h1>
-
-      <input
-        type="text"
-        value={greeting}
-        onChange={event => setGreeting(event.target.value)}
-      />
-    </div>
-  )
-
+    <>
+      {isTextVisible ? (
+        <>
+          <button onClick={toggleTextVisibility}>Hide Text</button>
+          <h1>Hello World</h1>
+        </>
+      ) : (
+        <button onClick={toggleTextVisibility}>Show Text</button>
+      )}
+    </>
+  );
 }
 
-export default App
+export default App;
