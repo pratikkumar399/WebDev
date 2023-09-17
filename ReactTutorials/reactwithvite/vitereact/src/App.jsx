@@ -1,24 +1,29 @@
 import React, { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import './App.css';
+import TextVIsible from './components/TextVIsible';
+import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
+import Navbar from './utils/Navbar';
+
+const Layout = () => {
+  return (
+    <div>
+      <Navbar />
+      <div>
+        <Outlet />
+      </div>
+    </div>
+  );
+}
 
 function App() {
-  const [isTextVisible, setTextVisible] = useState(true);
-
-  const toggleTextVisibility = () => {
-    setTextVisible(prevIsTextVisible => !prevIsTextVisible);
-  };
-
   return (
     <>
-      {isTextVisible ? (
-        <>
-          <button onClick={toggleTextVisibility}>Hide Text</button>
-          <h1>Hello World</h1>
-        </>
-      ) : (
-        <button onClick={toggleTextVisibility}>Show Text</button>
-      )}
+      <Router>
+        <Routes>
+          <Route path='/' element={<Layout />} >
+            <Route index element={<TextVIsible />} />
+          </Route>
+        </Routes>
+      </Router>
     </>
   );
 }

@@ -1,38 +1,40 @@
-* {
+body {
     margin: 0;
     padding: 0;
     /* box-sizing: border-box; */
+   
 }
 
 .parent {
-    height: 80vh;
-    width: 100vw;
+    height: 90vh;
+    width: 95%;
     border: 2px solid black;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    gap: 5rem;
 }
+
 
 .child, .child1 {
     display: flex; /* Make both .child and .child1 flex containers */
     border: 2px solid black;
     order: 3;
-    height: 400px;
-    width: 400px;
+    height: 40%;
+    width: 40%;
     margin: 10px 10px;   
 }
 
 .child1 {
     order: 2;
-    align-self: flex-start; /* Align .child1 along the cross-axis */
+    align-self: flex-end; /* Align .child1 along the cross-axis */
 }
 
 .subchild {
     border: 2px solid red;
-    height: 300px;
-    width: 300px;
+    height: 30%;
+    width: 30%;
     margin: 10px;
     padding: 10px;
     display: flex;
@@ -55,4 +57,5 @@ button {
     border-radius: 10px;
     cursor: pointer;
     align-items: center;
+    flex-direction: row;
 }
