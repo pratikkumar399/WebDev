@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
-import TextVIsible from './components/TextVIsible';
+import TextVisible from './projects/TextVisible/TextVIsible';
 import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
 import Navbar from './utils/Navbar';
+import Passowrd from './projects/passwordgenerator/Passowrd';
+
 
 const Layout = () => {
   return (
     <div>
       <Navbar />
-      <div>
-        <Outlet />
-      </div>
+
+      <Outlet />
+
     </div>
   );
+
 }
 
 function App() {
@@ -20,11 +23,15 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' element={<Layout />} >
-            <Route index element={<TextVIsible />} />
+            <Route index element={<TextVisible />} />
+            <Route path="/show" element={<TextVisible />} />
+            <Route path="/password" element={<Passowrd />} />
           </Route>
         </Routes>
       </Router>
     </>
+
+
   );
 }
 

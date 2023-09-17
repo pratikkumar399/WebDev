@@ -13,7 +13,10 @@ const Navbar = () => {
             {/* Responsive Navbar */}
             <nav className="flex items-center justify-between flex-wrap bg-teal-600 p-6">
                 <div className="flex items-center flex-shrink-0 text-white mr-6">
-                    <span className="font-semibold text-xl tracking-tight">Learn React</span>
+                    <Link to="/"  >
+
+                        <span className="font-semibold text-xl tracking-tight">Learn React</span>
+                    </Link>
                 </div>
                 <div className="block lg:hidden">
                     <button
@@ -40,6 +43,14 @@ const Navbar = () => {
                             className="block mt-4 lg:inline-block lg:mt-0 text-white-600 font-bold hover:text-white mr-4"
                         >
                             Visibility
+                        </Link>
+                    </div>
+                    <div className="text-sm lg:flex-grow">
+                        <Link
+                            to="/password"
+                            className="block mt-4 lg:inline-block lg:mt-0 text-white-600 font-bold hover:text-white mr-4"
+                        >
+                            Password
                         </Link>
                     </div>
 
