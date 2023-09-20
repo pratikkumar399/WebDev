@@ -3,6 +3,7 @@ import TextVisible from './projects/TextVisible/TextVIsible';
 import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
 import Navbar from './utils/Navbar';
 import Passowrd from './projects/passwordgenerator/Passowrd';
+import Currency from './projects/currencyProject/Currency';
 
 
 const Layout = () => {
@@ -25,6 +26,7 @@ function App() {
             <Route index element={<TextVisible />} />
             <Route path="/show" element={<TextVisible />} />
             <Route path="/password" element={<Passowrd />} />
+            <Route path="/currency" element={<Currency />} />
           </Route>
         </Routes>
       </Router>

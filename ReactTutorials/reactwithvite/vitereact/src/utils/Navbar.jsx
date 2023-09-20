@@ -53,6 +53,14 @@ const Navbar = () => {
                             Password
                         </Link>
                     </div>
+                    <div className="text-sm lg:flex-grow">
+                        <Link
+                            to="/currency"
+                            className="block mt-4 lg:inline-block lg:mt-0 text-white-600 font-bold hover:text-white mr-4"
+                        >
+                            Currency
+                        </Link>
+                    </div>
 
                 </div>
             </nav>
