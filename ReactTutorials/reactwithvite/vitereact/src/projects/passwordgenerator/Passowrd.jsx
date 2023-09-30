@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useCallback, useEffect, useRef } from 'react'
 
 const Passowrd = () => {
-    const [length, setLength] = useState(8);
+    const [length, setLength] = useState(10);
     const [numbersAllowed, setNumbersAllowed] = useState(false);
     const [charactersAllowed, setCharactersAllowed] = useState(false);
     const [password, setPassword] = useState('');
@@ -11,7 +11,6 @@ const Passowrd = () => {
         let characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         let numbers = '0123456789';
         let specaialCharacters = '!@#$%^&*()_+~`|}{[]\:;?><,./-=';
-        let characterSet = '';
         let password = '';
 
 
@@ -33,7 +32,7 @@ const Passowrd = () => {
 
     const copyPasswordToClipboard = useCallback(() => {
         passwordRef.current?.select();
-        passwordRef.current?.setSelectionRange(0, 8);
+        passwordRef.current?.setSelectionRange(0, 10);
         window.navigator.clipboard.writeText(password);
     });
 
