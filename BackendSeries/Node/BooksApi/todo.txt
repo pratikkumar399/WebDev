@@ -1,0 +1,8 @@
+[] Register a User
+[] Login a User
+[] Authenticate a user
+[] Add New Books
+[] Update new books
+[] get all books
+[] get a single book
+[] delete a book
