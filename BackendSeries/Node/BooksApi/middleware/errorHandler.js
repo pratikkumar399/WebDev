@@ -1,4 +1,4 @@
-import DEBUG_MODE from '../config';
+import { DEBUG_MODE } from '../config';
 import { ValidationError } from 'joi';
 
 const errorHanndler = (err, req, res, next) => {
@@ -10,8 +10,14 @@ const errorHanndler = (err, req, res, next) => {
     }
 
     if (err instanceof ValidationError) {
-
+        // used for validation error
+        statusCode = 422;
+        data = {
+            message: err.message,
+        }
     }
+
+    return res.status(statusCode).json(data);
 
 }
 export default errorHanndler;
