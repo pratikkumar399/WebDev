@@ -29,6 +29,7 @@ function Input({
                     placeholder="Amount"
                     disabled={amountDisabled}
                     value={amount}
+                    // check if on amount change exist or not if exist then call it
                     onChange={(e) => onAmountChange && onAmountChange(Number(e.target.value))}
                 />
             </div>
@@ -46,7 +47,6 @@ function Input({
                             {option}
                         </option>
                     ))}
-
 
                 </select>
             </div>

@@ -6,6 +6,7 @@ const Passowrd = () => {
     const [numbersAllowed, setNumbersAllowed] = useState(false);
     const [charactersAllowed, setCharactersAllowed] = useState(false);
     const [password, setPassword] = useState('');
+    // useRef hoook is used to access the dom element
     const passwordRef = useRef(null);
     const passwordgenerator = useCallback(() => {
         let characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -29,13 +30,14 @@ const Passowrd = () => {
         setPassword(password);
     }, [length, numbersAllowed, charactersAllowed]);
 
-
+    // copy password to clipboard
     const copyPasswordToClipboard = useCallback(() => {
         passwordRef.current?.select();
         passwordRef.current?.setSelectionRange(0, 10);
         window.navigator.clipboard.writeText(password);
     });
 
+    // useEffect hook is used to run the function when the component is mounted
     useEffect(() => {
         passwordgenerator();
     }, [length, numbersAllowed, charactersAllowed, passwordgenerator]);
