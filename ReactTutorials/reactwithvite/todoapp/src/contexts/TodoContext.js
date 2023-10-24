@@ -16,4 +16,4 @@ export const useTodo = () => useContext(TodoContext);
 
 // provider export
 
-export const Todoprovider = TodoContext.Provider;
+export const TodoProvider = TodoContext.Provider;
