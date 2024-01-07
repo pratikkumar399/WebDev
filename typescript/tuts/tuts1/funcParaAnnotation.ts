@@ -36,3 +36,13 @@ function returnName(name1 : string , name2 : string) : string[]  {
 const names = returnName('John' , 'Doe');
 
 console.log(names);
+
+function printMessage(message : string) : void {
+    console.log(message);
+}
+
+printMessage('Hello World');
+
+const printMessageArrow = (message : string) : void => console.log(message);
+
+printMessageArrow('Hello World');
