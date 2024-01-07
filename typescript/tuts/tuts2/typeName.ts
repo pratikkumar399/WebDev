@@ -41,3 +41,21 @@ const myCar : car = {
 
 printCarType(myCar);
 
+
+type optionalCar = {
+    model : string,
+    madeIn : number,
+    color ?: string,
+}
+
+function printOptionalCarType(car : optionalCar) : void{
+    console.log(`The car model is ${car.model} and it is made in ${car.madeIn} and it is ${car.color} in color`);
+}
+
+const myOptionalCar : optionalCar = {
+    model : "BMW",
+    madeIn : 2019,
+};
+    
+printOptionalCarType(myOptionalCar);
+
