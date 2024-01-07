@@ -21,4 +21,21 @@ for (let i = 0; i < multi2D.length; i++) {
         line += `${multi2D[i][j]} `;
     }
 }
+
+let line2 = "";
+
+// for(let num in multi2D){
+//     for(let num2 in multi2D[num]){
+//         line2 += `${multi2D[num][num2]} `;
+//     }
+// }
+
+
+for(let num of multi2D){
+    for(let num2 of num){
+        line2 += `${num2} `;
+    }
+}
+
+console.log(line2.trim());
 console.log(line.trim());
