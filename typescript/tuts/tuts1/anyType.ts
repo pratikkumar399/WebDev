@@ -6,7 +6,9 @@
 // to bugs and errors during production
 
 
-let color : any = "red";
+let color : any = "green";
 console.log(color); // valid
 color = 10;
 console.log(color); // valid
+
+
