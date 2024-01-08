@@ -9,6 +9,7 @@ type school = {
     location : string,
 }
 
+// combining more than one types at once
 type studentData = students & school;
 
 
