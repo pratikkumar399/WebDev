@@ -1,18 +1,80 @@
-import { useState } from "react"
-import { Link } from "react-router-dom"
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
+const styled = {
+    container: {
+        height: "350px",
+        width: "350px",
+        padding: "20px",
+        border: "1px solid #ccc",
+        borderRadius: "8px",
+        margin: "20px auto",
+    },
+    coloredText: {
+        color: "yellow",
+        fontSize: "18px",
+        margin: "8px 0",
+    },
+    input: {
+        width: "80%",
+        padding: "8px",
+        marginBottom: "16px",
+        borderRadius: "4px",
+        border: "1px solid #ccc",
+    },
+    link: {
+        color: "blue",
+        textDecoration: "none",
+        display: "block",
+        marginTop: "20px",
+    },
+};
 
 const UseState = () => {
-    const [count, setCount] = useState(0)
+    const [user, setUser] = useState({ name: "", age: 0 });
+
+    const handleNameChange = (e) => {
+        setUser({
+            ...user,
+            name: e.target.value,
+        });
+    };
+
+    const handleAgeChange = (e) => {
+        setUser({
+            ...user,
+            age: e.target.value,
+        });
+    };
+
     return (
         <div>
-            <h1> UseState Demo</h1>
-            <p>useState hook is used to update the current of a variable</p>
-            <button onClick={() => setCount(count => count + 1)} style={{ height: '50px', width: '140px', color: "white" }} >Counter : {count}</button>
-            <p></p>
-            <Link to={"/"} style={{ color: "blue" }}  >
-                Go to home page
+            <h1>UseState Demo</h1>
+
+            <form style={styled.container}>
+                <p>Name:</p>
+                <input
+                    type="text"
+                    placeholder="Enter your name here"
+                    onChange={handleNameChange}
+                    style={styled.input}
+                />
+                <p>Age:</p>
+                <input
+                    type="text"
+                    placeholder="Enter your age here"
+                    onChange={handleAgeChange}
+                    style={styled.input}
+                />
+                <p style={styled.coloredText}>Name: {user.name}</p>
+                <p style={styled.coloredText}>Age: {user.age}</p>
+            </form>
+
+            <Link to={"/"} style={styled.link}>
+                Go to the home page
             </Link>
         </div>
-    )
-}
-export default UseState
+    );
+};
+
+export default UseState;
