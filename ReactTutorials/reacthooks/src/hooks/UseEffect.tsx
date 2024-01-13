@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
+import UseEffectTwo from './UseEffectTwo';
 
 
 
@@ -29,8 +30,16 @@ const UseEffect = () => {
             <button onClick={handleClick} style={{ height: "50px", width: "120px", borderRadius: "2px", color: "white" }}>Counter</button>
             <p>{count}</p>
 
-            <Link to={"/"} style={{ color: "blue" }}  >
-                Go to home page
+            <Link to={"/useeffecttwo"}>
+                <u>
+                    Want another exammple of useEffect hook? Find it over here --&gt;
+                </u>
+            </Link>
+            <br />
+            <Link to={"/"} style={{ color: "green" }}  >
+                <u>
+                    Go to home page
+                </u>
             </Link>
 
         </div >

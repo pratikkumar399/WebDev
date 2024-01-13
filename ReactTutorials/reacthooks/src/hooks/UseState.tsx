@@ -33,17 +33,12 @@ const styled = {
 const UseState = () => {
     const [user, setUser] = useState({ name: "", age: 0 });
 
-    const handleNameChange = (e) => {
-        setUser({
-            ...user,
-            name: e.target.value,
-        });
-    };
 
-    const handleAgeChange = (e) => {
+
+    const handleChange = (e) => {
         setUser({
             ...user,
-            age: e.target.value,
+            [e.target.name]: e.target.value,
         });
     };
 
@@ -56,14 +51,16 @@ const UseState = () => {
                 <input
                     type="text"
                     placeholder="Enter your name here"
-                    onChange={handleNameChange}
+                    onChange={handleChange}
+                    name="name"
                     style={styled.input}
                 />
                 <p>Age:</p>
                 <input
                     type="text"
                     placeholder="Enter your age here"
-                    onChange={handleAgeChange}
+                    name="age"
+                    onChange={handleChange}
                     style={styled.input}
                 />
                 <p style={styled.coloredText}>Name: {user.name}</p>
