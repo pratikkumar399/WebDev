@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 const UseEffectTwo = () => {
     const [post, setPost] = useState({
@@ -6,20 +6,31 @@ const UseEffectTwo = () => {
         body: ""
     });
 
+    const effectRan = useRef(false);
+
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('https://dummyjson.com/posts')
-            .then(res => res.json())
-            .then((res) => {
-                console.log(res.posts[Math.floor(Math.random() * 30)])
-                setPost(res.posts[Math.floor(Math.random() * 30)]);
-                setLoading(false);
-            })
+        console.log("mounted")
+        if (effectRan.current === false) {
+            fetch('https://dummyjson.com/posts')
+                .then(res => res.json())
+                .then((res) => {
+                    console.log(res.posts[Math.floor(Math.random() * 30)])
+                    setPost(res.posts[Math.floor(Math.random() * 30)]);
+                    setLoading(false);
+                })
+
+            return () => {
+                console.log("unmounted")
+                effectRan.current = true;
+            }
+        }
+
     }, [])
 
     return (
-        <div>
+        <>
             {
                 loading ? <h1>Loading...</h1> :
                     <>
@@ -32,7 +43,7 @@ const UseEffectTwo = () => {
                         </div>
                     </>
             }
-        </div>
+        </>
 
     )
 }
