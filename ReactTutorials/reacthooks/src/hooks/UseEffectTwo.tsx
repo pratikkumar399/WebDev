@@ -13,7 +13,7 @@ const UseEffectTwo = () => {
     useEffect(() => {
         console.log("mounted")
         if (effectRan.current === false) {
-            fetch('https://dummyjson.com/posts')
+            fetch(`https://dummyjson.com/posts/`)
                 .then(res => res.json())
                 .then((res) => {
                     console.log(res.posts[Math.floor(Math.random() * 30)])
@@ -22,7 +22,7 @@ const UseEffectTwo = () => {
                 })
 
             return () => {
-                console.log("unmounted")
+                console.log("useeffect unmounted")
                 effectRan.current = true;
             }
         }
