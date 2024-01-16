@@ -33,9 +33,8 @@ const styled = {
 const UseState = () => {
     const [user, setUser] = useState({ name: "", age: 0 });
 
-
-
-    const handleChange = (e) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const handleChange = (e: any) => {
         setUser({
             ...user,
             [e.target.name]: e.target.value,

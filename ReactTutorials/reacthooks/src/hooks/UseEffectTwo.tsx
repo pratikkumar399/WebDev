@@ -1,14 +1,20 @@
 import { useEffect, useRef, useState } from "react"
 
+
+type postType = {
+    title: string;
+    body: string;
+}
+
 const UseEffectTwo = () => {
-    const [post, setPost] = useState({
+    const [post, setPost] = useState<postType>({
         title: "",
         body: ""
     });
 
     const effectRan = useRef(false);
 
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
         console.log("mounted")

@@ -12,6 +12,9 @@ const Home = () => {
                 <li>
                     <Link to="/useeffect">UseEffect</Link>
                 </li>
+                <li>
+                    <Link to="/usecallback">UseCallBack</Link>
+                </li>
             </ul>
 
         </div>
