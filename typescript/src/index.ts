@@ -21,29 +21,29 @@ let p2: Person ={
     canDrive: true
 }
 
-let say : speech = {
-    sayHello : (name:string) => `Hello ${name}`
-}
+// let say : speech = {
+//     sayHello : (name:string) => `Hello ${name}`
+// }
 
-function helloo(name:string):string{
-    return `Hello ${name}`;
-}
+// function helloo(name:string):string{
+//     return `Hello ${name}`;
+// }
 
-// function with arrow function
+// // function with arrow function
 
-const hellllll = (number:number) => {
-    `hello bhai ${number}`
-}
+// const hellllll = (number:number) => {
+//     `hello bhai ${number}`
+// }
 
-// lets write a function that takes optional parameter
-function optional(name:string, age?:number):string{
-    return `Hello ${name} your age is ${age}`;
-}
+// // lets write a function that takes optional parameter
+// function optional(name:string, age?:number):string{
+//     return `Hello ${name} your age is ${age}`;
+// }
 
 
 
-console.log(p1 === p2); // false
-console.log(say.sayHello("Pratik")); // Hello Pratik
-console.log(helloo("Pratik")); // Hello Pratik
-console.log(hellllll(10)); // hello bhai
-console.log(optional("Pratik",22)); // Hello Pratik your age is undefined
+// console.log(p1 === p2); // false
+// console.log(say.sayHello("Pratik")); // Hello Pratik
+// console.log(helloo("Pratik")); // Hello Pratik
+// console.log(hellllll(10)); // hello bhai
+// console.log(optional("Pratik",22)); // Hello Pratik your age is undefined
