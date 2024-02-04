@@ -46,7 +46,4 @@ router.get('/api/products', apiMiddleware, (req, res) => {
 })
 
 
-
-
-
 module.exports = router;
