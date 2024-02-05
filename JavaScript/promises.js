@@ -36,3 +36,20 @@ newArr.
     .catch((error) => {
         console.log("Error: " + error);
     })
+
+// use of async and await to handle promises
+
+const asyncFunction = async () => {
+    try {
+        const result = await newArr;
+        console.log(result);
+    }
+    catch (error) {
+        console.log("Error: " + error);
+    }
+}
+
+// promise.all -> to handle multiple promises
+
+
+
