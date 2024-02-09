@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .center {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .center>div {
+            margin: 10px;
+        }
+
+        .container {
+            width: 300px;
+            height: 300px;
+            border: 2px solid red;
+        }
+
+        .box1 {
+            height: 300px;
+            width: 300px;
+            border: 2px solid blue;
+
+        }
+
+        .relative {
+            position: relative;
+            top: 20px;
+            left: 20px;
+        }
+
+        .absolute {
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+
+        .fixed {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 0;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="container"></div>
+        <div class="box1">1</div>
+        <div class="box1">2</div>
+        <div class="box1">2</div>
+    </div>
+
+    <div class="relative">Relative Positioning</div>
+    <div class="absolute">Absolute Positioning</div>
+    <div class="fixed">Fixed Positioning</div>
+    <div class="sticky">Sticky Positioning</div>
+
+
+
+
+    <script src="/Promises2.js"></script>
+</body>
+
+</html>
