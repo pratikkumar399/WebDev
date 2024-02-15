@@ -13,7 +13,7 @@ const allUsers = [
 const Search = () => {
     return (
         <div>
-            <input type="text" />
+            <input placeholder='Search...' type="text" />
         </div>
     )
 }
