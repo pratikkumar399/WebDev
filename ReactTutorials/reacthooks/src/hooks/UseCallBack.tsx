@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const allUsers = [
     "Patrick",
@@ -27,6 +28,10 @@ const UseCallBack = () => {
     return (
         <div>
             <Search />
+
+            <Link to={"/"} >
+                Go to the home page
+            </Link>
         </div>
     )
 }

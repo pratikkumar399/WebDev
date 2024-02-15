@@ -11,7 +11,7 @@ const UseEffect = () => {
         console.log("useEffect called");
 
 
-        // clearnup function to clean the functions that the are not required in the subsequent renders 
+        // cleanup function to clean the functions that the are not required in the subsequent renders 
         // for that we just need to return the function from the useEffect
         // the dependency array is needed in case when we need to give useEffect some value , so that it can run only when that value changes
         // useEffect handles the updates by default , and therefore it cleans up the previous effects before applying the next effects

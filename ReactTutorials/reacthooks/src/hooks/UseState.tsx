@@ -35,6 +35,7 @@ const UseState = () => {
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const handleChange = (e: any) => {
+        e.preventDefault();
         setUser({
             ...user,
             [e.target.name]: e.target.value,
