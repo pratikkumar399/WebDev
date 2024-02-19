@@ -7,13 +7,16 @@ const Home = () => {
             <h3>Quick Tip : React only shows the updates in the values if the ui is rerendered somehow</h3>
             <ul>
                 <li>
-                    <Link to="/usestate">UseState</Link>
+                    <Link to="/usestate">useState</Link>
                 </li>
                 <li>
-                    <Link to="/useeffect">UseEffect</Link>
+                    <Link to="/useeffect">useEffect</Link>
                 </li>
                 <li>
-                    <Link to="/usecallback">UseCallBack</Link>
+                    <Link to="/usecallback">useCallBack</Link>
+                </li>
+                <li>
+                    <Link to="/useref">useRef</Link>
                 </li>
             </ul>
 
